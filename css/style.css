@@ -1,5 +1,5 @@
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0;
   padding: 0;
 }
@@ -8,10 +8,16 @@ body {
   margin: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 17px;
-  color: #926239;
   line-height: 1.6;
+  opacity: 1;
+  transition: 7s opacity;
 }
 
+body.fade-out {
+
+    opacity: 0;
+    transition: none;
+}
 /* Landing Section */
 
 #showcase {
@@ -84,33 +90,55 @@ nav a {
   text-transform: uppercase;
 }
 
-/* Section A */
+/* Intro Section */
 
-#section-a {
-  padding: 50px;
+#intro {
+
   background: #303030;
   color: #fff;
   text-align: justify;
-  display: inline-flex;
 }
 
-#section-a div {
-  margin: auto 5px; 
+#intro div {
+  margin: auto 50px;
   flex: 1;
   padding: 20px;
 }
 
 .box-1 {
-  border: 1px solid red;
-  font-size: 24px;
+  font-size: 26px;
   height:100%;
 
 }
 
+@media (min-width: 950px) {
+  #intro {
+    display: inline-flex;
+    padding: 50px;
+  }
+}
+
+
+
+
+
 /* Media Queries */
-@media screen and (max-width: 1190px) and (min-width: 501px) {
+
+@media screen and (max-width: 1190px) and (min-width: 900px) {
   #showcase {
     margin-left: -300px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 700px) {
+  #showcase {
+    margin-left: -500px;
+  }
+}
+
+@media screen and (max-width: 700px) and (min-width: 501px) {
+  #showcase {
+    margin-left: -700px;
   }
 }
 

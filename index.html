@@ -23,9 +23,9 @@
     </ul>
   </nav>
 
-  <section id="section-a">
+  <section id="intro">
     <div class="box-1">
-      "Every child is an artist, the problem is staying an artist when you grow up"
+      <i>"Every child is an artist, the problem is staying an artist when you grow up"</i>
       <br/>
       -Pablo Picasso
       <br/>
@@ -40,6 +40,18 @@
       Through our partnership we will uncover and rremove inner obstacles stopping you from being your creative self. Do you want a job that provides creative outlet or discover other opportunities for creativity? Let's talk!
     </div>
   </section>
+  
+  <script>
+    document.body.className += ' fade-out';
+
+    window.addEventListener(
+    'load',
+    function load() {
+        window.removeEventListener('load', load, false);
+        document.body.classList.remove('fade-out');
+    },
+    false);
+  </script>
 
 </body>
 </html>
